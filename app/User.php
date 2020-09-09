@@ -7,6 +7,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+
+    //protected $table = 'users';
+
     use Notifiable;
 
     /**
@@ -26,4 +29,23 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $casts = [
+        'is_admin' => 'boolean'
+    ];
+
+    public static function findByEmail($email)
+    {
+        return static::where(compact('email'))->first();
+    }
+
+    public function profession()
+    {
+        return $this->belongsTo(Profession::class);
+    }
+
+    public function isAdmin()
+    {
+        return $this->is_admin;
+    }
 }

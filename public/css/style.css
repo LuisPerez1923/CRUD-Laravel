@@ -1,0 +1,91 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  background-color: #f5f5f5;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+/*Estilos personalizados*/
+
+.contenido-principal ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contenido-principal li {
+  list-style: none;
+  border: 1px solid black ;
+  flex-basis: calc(50% - 10px);
+  text-align: center;
+  padding: 10px 0;
+  margin: 5px 0 ;
+}
+
+/*Descripcion usuario*/
+
+p {
+  line-height: 0.5;
+}
+
+p:first-of-type {
+  margin-top: 20px;
+}
+
+/*formulario crear*/
+
+.formulario-crear label,
+input {
+  display: block;
+}
+
+.formulario-crear button {
+  margin-top: 20px;
+}
+
+.descripcion-usuario ul {
+  padding: 0;
+  margin: 0;
+  display: unset;
+  list-style-type: disc!important;
+}
+
+.descripcion-usuario ul li {
+  border: none;
+  display: block;
+  text-align: left;
+  
+}
+
+/*Boton*/
+button {
+  border-radius: 10px;
+  display: block;
+  margin: 10px auto 0 auto;
+  padding: 1px 20px;
+  color: rgb(37, 39, 201);
+  border: 2px rgb(37, 39, 201) solid;
+  background: white;
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover {
+  color: white;
+  border: 2px white solid;
+  background: rgb(37, 39, 201);
+}
+
